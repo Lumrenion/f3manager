@@ -1,0 +1,19 @@
+plugin.tx_f3manager {
+	view {
+		templateRootPath = {$plugin.tx_f3manager.view.templateRootPath}
+		partialRootPath = {$plugin.tx_f3manager.view.partialRootPath}
+		layoutRootPath = {$plugin.tx_f3manager.view.layoutRootPath}
+	}
+}
+
+page {
+    includeCSS {
+        f3managerCss = EXT:f3manager/Resources/Public/Css/style.css
+    }
+    includeJS {
+
+    }
+    includeJSFooter {
+        f3managerJs = EXT:f3manager/Resources/Public/Javascript/script.js
+    }
+}

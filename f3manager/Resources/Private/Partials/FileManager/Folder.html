@@ -1,0 +1,55 @@
+{namespace sd=BeechIt\FalSecuredownload\ViewHelpers}
+{namespace f3m=LumIT\F3manager\ViewHelpers}
+
+<div class="f3manager_folders row">
+    <f:for each="{folder.subFolders}" as="subFolder">
+        <sd:security.assetAccess folder="{subFolder}">
+            <f:link.action class="col-lg-2 col-md-3 col-sm-4 col-xs-12 f3manager_folder" action="openFolder" arguments="{openFolder: subFolder.identifier}">
+                <div class="f3manager_folder_inner_wrapper">
+                    <div class="f3manager_folder_name_outer_wrapper">
+                        <div class="f3manager_folder_name_inner_wrapper" aria-label="{subFolder.name}">
+                            <div class="f3manager_folder_icon_outer_wrapper">
+                                <div class="f3manager_folder_icon_inner_wrapper">
+                                    <img alt="blank" src="typo3conf/ext/f3manager/Resources/Public/Images/filetype.svg#blank" />
+                                </div>
+                            </div>
+                            <div class="f3manager_folder_name" data-toggle="tooltip" data-placement="bottom" title="{subFolder.name}">
+                                <span class="icon-folder {sd:leaveState(folder:'{subFolder}', then:'icon-folder-open')}" data-folder="{subFolder.combinedIdentifier}">{subFolder.name}</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </f:link.action>
+        </sd:security.assetAccess>
+    </f:for>
+</div>
+<div class="clearfix"></div>
+<div class="f3manager_files row">
+    <f:for each="{folder.files}" as="file">
+        <sd:security.assetAccess folder="{folder}" file="{file}">
+            <sd:downloadLink class="col-lg-2 col-md-3 col-sm-4 col-xs-12 f3manager_file" additionalAttributes="{data-file-id:'{file.properties.uid}',data-file-name:'{file.name}'}" file="{file}">
+                <div class="f3manager_file_inner_wrapper">
+                    <div class="f3manager_file_preview_outer">
+                        <div class="f3manager_file_preview_inner">
+                            <div></div>
+                            <img src="typo3conf/ext/f3manager/Resources/Public/Images/filetype.svg#{file.extension}" class="filetype" />
+                        </div>
+                    </div>
+                    <div class="f3manager_file_name_outer_wrapper">
+                        <div class="f3manager_file_name_inner_wrapper" aria-label="{file.name}">
+                            <div class="f3manager_file_icon_outer_wrapper">
+                                <div class="f3manager_file_icon_inner_wrapper">
+                                    <img alt="{file.extension}" src="typo3conf/ext/f3manager/Resources/Public/Images/filetype.svg#{file.extension}" />
+                                </div>
+                            </div>
+                            <div class="f3manager_file_name" data-toggle="tooltip" data-placement="bottom" title="{file.name}">
+                                <span>{file.name}</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </sd:downloadLink>
+        </sd:security.assetAccess>
+    </f:for>
+
+</div>

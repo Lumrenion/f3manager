@@ -1,0 +1,90 @@
+{namespace sd=BeechIt\FalSecuredownload\ViewHelpers}
+{namespace f3m=LumIT\F3manager\ViewHelpers}
+
+<f:layout name="Default" />
+
+<f:section name="main">
+    <div id="typo3-docbody">
+        <div id="typo3-inner-docbody">
+            <f:flashMessages renderMode="div" />
+        </div>
+    </div>
+	<f:if condition="{folder}">
+		<f:then>
+            <f:render partial="FileManager/Breadcrumb" arguments="{folder:folder, parentFolders:parentFolders}" />
+            <hr>
+			<sd:security.assetAccess folder="{folder}">
+				<f:render partial="FileManager/Folder" arguments="{folder:folder}" />
+			</sd:security.assetAccess>
+
+            <f3m:security.writePermission folder="{folder}">
+                <div class="modal fade" id="createFolderModal">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                <h4 class="modal-title"><f:translate key="createNewFolderPopUpHeader">Create New Folder</f:translate></h4>
+                            </div>
+                            <div class="modal-body">
+                                <f:form method="post" controller="FileManager" action="createFolder" name="folder" object="{folder}">
+                                    <f:form.hidden property="identifier" value="{folder.identifier}" />
+                                    <div class="input-group">
+                                        <f:form.textfield name="newFolder" class="form-control" placeholder="{f:translate(key: 'createNewFolderInput', default: 'Name of the new Folder')}" />
+                                        <span class="input-group-btn"><f:form.submit class="btn btn-default" value="{f:translate(key: 'createNewFolderSubmit', default: 'Create')}" /></span>
+                                    </div>
+                                </f:form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="modal fade" id="renameFolderModal">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                <h4 class="modal-title"><f:translate key="renameFolderPopUpHeader">Rename Folder</f:translate> "{folder.identifier}"</h4>
+                            </div>
+                            <div class="modal-body">
+                                <f:form method="post" controller="FileManager" action="renameFolder" name="folder" object="{folder}">
+                                    <f:form.hidden property="identifier" value="{folder.identifier}" />
+                                    <div class="input-group">
+                                        <f:form.textfield name="newName" class="form-control" placeholder="{f:translate(key: 'renameFolderInput', default: 'New Folder Name')}" />
+                                        <span class="input-group-btn"><f:form.submit class="btn btn-default" value="{f:translate(key: 'renameFolderSubmit', default: 'Rename!')}" /></span>
+                                    </div>
+                                </f:form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="modal fade" id="renameFilesModal">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                <h4 class="modal-title"><f:translate key="renameFilesPopUpHeader">Rename selected Files</f:translate></h4>
+                            </div>
+                            <div class="modal-body">
+                                <f:form method="post" controller="FileManager" action="renameFiles" name="folder" object="{folder}">
+                                    <f:form.hidden property="identifier" value="{folder.identifier}" id="renameFilesForm" />
+                                    <div class="renameFileInputFields">
+                                        <f:form.textfield name="files[f3manager_file_id_for_file_to_rename]" class="form-control renameFileInputField" placeholder="{f:translate(key: 'renameFilesInput', default: 'New Folder Name')}" />
+                                    </div>
+                                    <f:form.submit class="btn btn-default pull-right" value="{f:translate(key: 'renameFolderSubmit', default: 'Rename!')}" />
+                                </f:form>
+                                <div class="clearfix"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </f3m:security.writePermission>
+
+		</f:then>
+
+		<f:else>
+			<f:translate key="noFolderSelected">No folder selected</f:translate>
+		</f:else>
+	</f:if>
+
+</f:section>

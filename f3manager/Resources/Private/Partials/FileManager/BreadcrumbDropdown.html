@@ -1,0 +1,105 @@
+{namespace sd=BeechIt\FalSecuredownload\ViewHelpers}
+{namespace f3m=LumIT\F3manager\ViewHelpers}
+<sd:security.assetAccess folder="{folder}">
+    <ul class="dropdown-menu" role="menu" xmlns:f="http://www.w3.org/1999/html">
+        <f:comment>Create New Folder</f:comment>
+        <f3m:security.writePermission folder="{folder}">
+            <li>
+                <a href="#" data-toggle="modal" data-target="#createFolderModal">
+                    <span class="glyphicon glyphicon-unchecked"></span> <f:translate key="newFolderBreadcrumbButton">New Folder</f:translate>
+                </a>
+            </li>
+        </f3m:security.writePermission>
+
+        <f:comment>Rename Folder</f:comment>
+        <f:if condition="{iteration.isFirst} == 0">
+            <f3m:security.writePermission folder="{folder}">
+                <li>
+                    <a href="#" data-toggle="modal" data-target="#renameFolderModal">
+                        <span class="glyphicon glyphicon-edit"></span> <f:translate key="renameFolderBreadcrumbButton">Rename Folder</f:translate>
+                    </a>
+                </li>
+            </f3m:security.writePermission>
+        </f:if>
+
+        <f:comment>Upload ZIP</f:comment>
+        <f3m:security.writePermission folder="{folder}">
+            <li>
+                <f:form method="post" controller="FileManager" action="uploadZip" name="folder" object="{folder}" enctype="multipart/form-data">
+                    <f:form.hidden property="identifier" value="{folder.identifier}" />
+                    <div class="f3manager_file_button_container">
+                        <span class="glyphicon glyphicon-collapse-up"></span> <span><f:translate key="uploadZipBreadcrumbButton">Upload & extract ZIP</f:translate></span>
+                        <f3m:form.upload property="file" class="f3manager_file_upload_button f3manager_zip_file_upload_button" additionalAttributes="{onChange:'this.form.submit()'}" />
+                    </div>
+                </f:form>
+            </li>
+        </f3m:security.writePermission>
+
+        <f:comment>Download Folder</f:comment>
+        <sd:security.assetAccess folder="{folder}">
+            <li>
+                <f:link.action action="downloadFolder" arguments="{folder: crumb.identifier}">
+                    <span class="glyphicon glyphicon-collapse-down"></span> <f:translate key="downloadFolderBreadcrumbButton">Download Folder</f:translate>
+                </f:link.action>
+            </li>
+        </sd:security.assetAccess>
+
+        <f:comment>Delete Folder</f:comment>
+        <f:if condition="{iteration.isFirst} == 0">
+            <f3m:security.writePermission folder="{folder}">
+                <li>
+                    <f:link.action action="deleteFolder" arguments="{folder: crumb.identifier}">
+                        <span class="glyphicon glyphicon-trash"></span> <f:translate key="deleteFolderBreadcrumbButton">Delete Folder</f:translate>
+                    </f:link.action>
+                </li>
+            </f3m:security.writePermission>
+        </f:if>
+
+        <li>
+            <hr>
+        </li>
+
+        <f:comment>Create File</f:comment>
+
+        <f:comment>Rename File(s)</f:comment>
+        <f3m:security.writePermission folder="{folder}">
+            <li>
+                <a href="#" data-toggle="modal" class="f3manager_files_rename_button" data-target="#renameFilesModal">
+                    <span class="glyphicon glyphicon-pencil"></span> <f:translate key="renameFilesBreadcrumbButton">Rename selected Files</f:translate>
+                </a>
+            </li>
+        </f3m:security.writePermission>
+
+        <f:comment>Upload Files</f:comment>
+        <f3m:security.writePermission folder="{folder}">
+            <li>
+                <f:form method="post" controller="FileManager" action="uploadFiles" name="folder" object="{folder}" enctype="multipart/form-data">
+                    <f:form.hidden property="identifier" value="{folder.identifier}" />
+                    <div class="f3manager_file_button_container">
+                        <span class="glyphicon glyphicon-upload"></span> <span><f:translate key="uploadFilesBreadcrumbButton">Upload Files</f:translate></span>
+                        <f3m:form.upload property="file" multiple="multiple"  class="f3manager_file_upload_button f3manager_multi_file_upload_button" additionalAttributes="{onChange:'this.form.submit()'}" />
+                    </div>
+                </f:form>
+            </li>
+        </f3m:security.writePermission>
+
+        <f:comment>Download Multiple Files As ZIP</f:comment>
+        <sd:security.assetAccess folder="{folder}">
+            <li>
+                <f:link.action class="f3manager_files_download_button" action="downloadMultipleFiles" arguments="{folder: crumb.identifier}" noCacheHash="true">
+                    <span class="glyphicon glyphicon-download"></span> <span><f:translate key="downloadFilesBreadcrumbButton">Download selected Files</f:translate></span>
+                </f:link.action>
+            </li>
+        </sd:security.assetAccess>
+
+
+        <f:comment>Delete Files</f:comment>
+        <f3m:security.writePermission folder="{folder}">
+            <li>
+                <a href="#" class="f3manager_delete_files">
+                    <span class="glyphicon glyphicon-remove-circle"></span> <f:translate key="deleteFilesBreadcrumbButton">Delete selected Files</f:translate>
+                </a>
+            </li>
+        </f3m:security.writePermission>
+    </ul>
+</sd:security.assetAccess>

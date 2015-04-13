@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" target-language="de" datatype="plaintext" original="messages" date="2015-03-30T20:59:51Z" product-name="f3manager">
+		<header/>
+		<body>
+            <trans-unit id="flexform.sheetTitle">
+                <source>Frontend File Manager settings</source>
+                <target>Frontend Datei Manager Einstellungen</target>
+            </trans-unit>
+            <trans-unit id="flexform.storage">
+                <source>Storage</source>
+                <target>Storage</target>
+            </trans-unit>
+            <trans-unit id="flexform.storage.empty">
+                <source>- Select storage -</source>
+                <target><![CDATA[- W&auml;hle einen Storage -]]></target>
+            </trans-unit>
+            <trans-unit id="flexform.folder">
+                <source>Folder</source>
+                <target>Ordner</target>
+            </trans-unit>
+            <trans-unit id="flexform.folder.selectStorage">
+                <source>- First select a storage -</source>
+                <target><![CDATA[- Zuerst, w&auml;hle einen Storage -]]></target>
+            </trans-unit>
+
+
+			<trans-unit id="plugin.title">
+			    <source>Frontend File Manager</source>
+			    <target>Frontend Datei Manager</target>
+			</trans-unit>
+			<trans-unit id="plugin.description">
+                <source>This Frontend Plugin offers a complete frontend File Manager á la Google Drive</source>
+                <target>Dieses Frontend-Plugin bietet einen umfangreichen Frontend Datei-Manager nach dem Vorbild von Google Drive</target>
+            </trans-unit>
+		</body>
+	</file>
+</xliff>

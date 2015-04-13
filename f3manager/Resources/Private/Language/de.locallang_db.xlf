@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" target-language="de" datatype="plaintext" original="messages" date="2015-03-30T20:59:51Z" product-name="f3manager">
+		<header/>
+		<body>
+			<trans-unit id="tx_f3manager_domain_model_filemanager">
+				<source>File Manager</source>
+				<target>Datei Manager</target>
+			</trans-unit>
+			<trans-unit id="write_permission">
+                <source>Write Permission</source>
+                <target>Schreib Berechtigung</target>
+            </trans-unit>
+            <trans-unit id="write_any_login">
+                <source>Allow at any login</source>
+                <target>Erlauben, wenn angemeldet</target>
+            </trans-unit>
+		</body>
+	</file>
+</xliff>

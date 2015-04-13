@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+    <file source-language="en" target-language="de" datatype="plaintext" original="messages" date="2014-02-19T09:16:58Z" product-name="f3manager">
+        <header/>
+        <body>
+            <trans-unit id="noFolderSelected">
+                <source>No folder selected</source>
+                <target><![CDATA[Kein Ordner ausgew&auml;hlt]]></target>
+            </trans-unit>
+            <trans-unit id="rootFolder">
+                <source>Start</source>
+                <target>Start</target>
+            </trans-unit>
+            <trans-unit id="untitledFolder">
+                <source>Untitled</source>
+                <target>Unbenannt</target>
+            </trans-unit>
+
+            <trans-unit id="newFolderBreadcrumbButton">
+                <source>New Folder</source>
+                <target>Neuer Ordner</target>
+            </trans-unit>
+            <trans-unit id="renameFolderBreadcrumbButton">
+                <source>Rename Folder</source>
+                <target>Ordner umbenennen</target>
+            </trans-unit>
+            <trans-unit id="uploadZipBreadcrumbButton">
+                <source><![CDATA[Upload &amp; extract ZIP]]></source>
+                <target><![CDATA[ZIP hochladen &amp; entpacken]]></target>
+            </trans-unit>
+            <trans-unit id="downloadFolderBreadcrumbButton">
+                <source>Download Folder</source>
+                <target>Ordner herunterladen</target>
+            </trans-unit>
+            <trans-unit id="deleteFolderBreadcrumbButton">
+                <source>Delete Folder</source>
+                <target><![CDATA[Ordner l&ouml;schen]]></target>
+            </trans-unit>
+
+
+            <trans-unit id="newFileBreadcrumbButton">
+                <source>New File</source>
+                <target>Neue Datei</target>
+            </trans-unit>
+            <trans-unit id="renameFilesBreadcrumbButton">
+                <source>Rename selected Files</source>
+                <target><![CDATA[Ausgew&auml;hlte Dateien umbenennen]]></target>
+            </trans-unit>
+            <trans-unit id="downloadFilesBreadcrumbButton">
+                <source>Download selected Files</source>
+                <target><![CDATA[Ausgew&auml;hlte Dateien herunterladen]]></target>
+            </trans-unit>
+            <trans-unit id="uploadFilesBreadcrumbButton">
+                <source>Upload Files</source>
+                <target>Dateien hochladen</target>
+            </trans-unit>
+            <trans-unit id="deleteFilesBreadcrumbButton">
+                <source>Delete selected Files</source>
+                <target><![CDATA[Ausgew&auml;hlte Dateien l&ouml;schen]]></target>
+            </trans-unit>
+
+
+            <trans-unit id="renameFolderPopUpHeader">
+                <source>Rename Folder</source>
+                <target>Ordner umbenennen</target>
+            </trans-unit>
+            <trans-unit id="renameFolderSubmit">
+                <source>Rename</source>
+                <target>Umbenennen</target>
+            </trans-unit>
+            <trans-unit id="renameFolderInput">
+                <source>New Folder Name</source>
+                <target>Neuer Ordner-Name</target>
+            </trans-unit>
+
+            <trans-unit id="createNewFolderPopUpHeader">
+                <source>Create new folder</source>
+                <target>Neuen Ordner erstellen</target>
+            </trans-unit>
+            <trans-unit id="createNewFolderInput">
+                <source>Name of the new folder</source>
+                <target>Name des neuen Ordners</target>
+            </trans-unit>
+            <trans-unit id="createNewFolderSubmit">
+                <source>Create</source>
+                <target>Erstellen</target>
+            </trans-unit>
+
+            <trans-unit id="renameFilesPopUpHeader">
+                <source>Rename selected Files</source>
+                <target><![CDATA[Ausgew&auml;hlte Dateien umbenennen]]></target>
+            </trans-unit>
+            <trans-unit id="renameFilesSubmit">
+                <source>Rename</source>
+                <target>Umbenennen</target>
+            </trans-unit>
+        </body>
+    </file>
+</xliff>

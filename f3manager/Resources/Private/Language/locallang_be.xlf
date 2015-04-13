@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="messages" date="2015-03-30T20:59:51Z" product-name="f3manager">
+		<header/>
+		<body>
+            <trans-unit id="flexform.sheetTitle">
+                <source>FileTree settings</source>
+            </trans-unit>
+            <trans-unit id="flexform.storage">
+                <source>Storage</source>
+            </trans-unit>
+            <trans-unit id="flexform.storage.empty">
+                <source>- Select storage -</source>
+            </trans-unit>
+            <trans-unit id="flexform.folder">
+                <source>Folder</source>
+            </trans-unit>
+            <trans-unit id="flexform.folder.selectStorage">
+                <source>- First select a storage -</source>
+            </trans-unit>
+
+
+			<trans-unit id="plugin.title">
+			    <source>Frontend File Manager</source>
+			</trans-unit>
+			<trans-unit id="plugin.description">
+                <source>This Frontend Plugin offers a complete frontend File Manager á la Google Drive</source>
+            </trans-unit>
+		</body>
+	</file>
+</xliff>

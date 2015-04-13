@@ -1,0 +1,54 @@
+{namespace sd=BeechIt\FalSecuredownload\ViewHelpers}
+{namespace f3m=LumIT\F3manager\ViewHelpers}
+
+<nav role="navigation" class="f3manager_breadcrumb btn-group btn-breadcrumb">
+    <f:if condition="{parentFolders}">
+        <f:for each="{parentFolders}" as="crumb" iteration="iteration">
+            <f:if condition="{iteration.isLast} == 0">
+                <f:then>
+                    <f:link.action class="btn btn-default" action="openFolder" arguments="{openFolder: crumb.identifier}">
+                        <f:if condition="{crumb.name} != ''">
+                            <f:then>
+                                {crumb.name}
+                            </f:then>
+                            <f:else>
+                                <f:if condition="{iteration.isFirst} == 1">
+                                    <f:then>
+                                        <span class="glyphicon glyphicon-home"></span>
+                                    </f:then>
+                                    <f:else>
+                                        <f:translate key="untitledFolder">Untitled</f:translate>
+                                    </f:else>
+                                </f:if>
+                            </f:else>
+                        </f:if>
+                    </f:link.action>
+                </f:then>
+                <f:else>
+                    <div class="btn btn-default dropdown">
+                        <span class="dropdown-toggle" aria-expanded="false" role="button" aria-haspopup="true" data-toggle="dropdown">
+                            <f:if condition="{crumb.name} != ''">
+                                <f:then>
+                                    {crumb.name}
+                                </f:then>
+                                <f:else>
+                                    <f:if condition="{iteration.isFirst} == 1">
+                                        <f:then>
+                                            <span class="glyphicon glyphicon-home"></span>
+                                        </f:then>
+                                        <f:else>
+                                            <f:translate key="untitledFolder">Untitled</f:translate>
+                                        </f:else>
+                                    </f:if>
+                                </f:else>
+                            </f:if>
+                            <sd:security.assetAccess folder="{crumb}"><span class="caret"></span></sd:security.assetAccess>
+                        </span>
+                        <f:render partial="FileManager/BreadcrumbDropdown" arguments="{folder:folder, crumb:crumb, iteration:iteration}" />
+                    </div>
+                </f:else>
+            </f:if>
+
+        </f:for>
+    </f:if>
+</nav>

@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+    <file source-language="en" datatype="plaintext" original="messages" date="2014-02-19T09:16:58Z" product-name="f3manager">
+        <header/>
+        <body>
+            <trans-unit id="noFolderSelected">
+                <source>No folder selected</source>
+            </trans-unit>
+            <trans-unit id="rootFolder">
+                <source>Start</source>
+            </trans-unit>
+            <trans-unit id="untitledFolder">
+                <source>Untitled</source>
+            </trans-unit>
+
+            <trans-unit id="newFolderBreadcrumbButton">
+                <source>New Folder</source>
+            </trans-unit>
+            <trans-unit id="renameFolderBreadcrumbButton">
+                <source>Rename Folder</source>
+            </trans-unit>
+            <trans-unit id="uploadZipBreadcrumbButton">
+                <source><![CDATA[Upload &amp; extract ZIP]]></source>
+            </trans-unit>
+            <trans-unit id="downloadFolderBreadcrumbButton">
+                <source>Download Folder</source>
+            </trans-unit>
+            <trans-unit id="deleteFolderBreadcrumbButton">
+                <source>Delete Folder</source>
+            </trans-unit>
+
+
+            <trans-unit id="newFileBreadcrumbButton">
+                <source>New File</source>
+            </trans-unit>
+            <trans-unit id="renameFilesBreadcrumbButton">
+                <source>Rename selected Files</source>
+            </trans-unit>
+            <trans-unit id="downloadFilesBreadcrumbButton">
+                <source>Download selected Files</source>
+            </trans-unit>
+            <trans-unit id="uploadFilesBreadcrumbButton">
+                <source>Upload Files</source>
+            </trans-unit>
+            <trans-unit id="deleteFilesBreadcrumbButton">
+                <source>Delete selected Files</source>
+            </trans-unit>
+
+
+            <trans-unit id="renameFolderPopUpHeader">
+                <source>Rename Folder</source>
+            </trans-unit>
+            <trans-unit id="renameFolderSubmit">
+                <source>Rename</source>
+            </trans-unit>
+            <trans-unit id="renameFolderInput">
+                <source>New Folder Name</source>
+            </trans-unit>
+
+            <trans-unit id="createNewFolderPopUpHeader">
+                <source>Create new folder</source>
+            </trans-unit>
+            <trans-unit id="createNewFolderInput">
+                <source>Name of the new folder</source>
+            </trans-unit>
+            <trans-unit id="createNewFolderSubmit">
+                <source>Create</source>
+            </trans-unit>
+
+            <trans-unit id="renameFilesPopUpHeader">
+                <source>Rename selected Files</source>
+            </trans-unit>
+            <trans-unit id="renameFilesSubmit">
+                <source>Rename</source>
+            </trans-unit>
+        </body>
+    </file>
+</xliff>
