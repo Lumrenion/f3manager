@@ -6,21 +6,30 @@
 .. include:: ../Includes.txt
 
 
-.. _introduction:
-
 Introduction
 ============
 
 
-.. _what-it-does:
-
 What does it do?
 ----------------
 
-This chapter should give a brief overview of the extension. What does it do? What problems does it solve?
-Who is interested in this? Basically, this section includes everything people need to know to decide whether they
-should go on with this extension or not.
+This extension (f3manager) is a frontend file manager based on typo3 FAL.
 
+It extends the extension "fal_securedownload" with additional configuration for writing permission.
+
+It implements a frontend plugin - inspired by Google Drive.
+The eligible User - defined in the Backend - can
+
+- Create folders
+- Rename folders
+- Download folders as ZIP-file
+- Upload and extract ZIP-files
+- Delete folders
+
+- Rename files
+- Download single and multiple files
+- Upload single and multiple files
+- Delete files
 
 .. _screenshots:
 
@@ -30,10 +39,8 @@ Screenshots
 This chapter should help people figure how the extension works. Remove it
 if not relevant.
 
-.. figure:: ../Images/IntroductionPackage.png
-   :width: 500px
-   :alt: Introduction Package
+.. figure:: ../Images/frontend.png
+   :width: 950px
+   :alt: Frontend File Manager Example
 
-   Introduction Package just after installation (caption of the image)
-
-   How the Frontend of the Introduction Package looks like just after installation (legend of the image)
+   **Image 1:** Example of the Frontend File Manager

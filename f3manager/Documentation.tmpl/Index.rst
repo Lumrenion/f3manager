@@ -20,13 +20,13 @@ FAL Frontend File Manager
 		|release|
 
 	:Language:
-		en
+		en,de
 
 	:Description:
 		This extension extends the fal_securedownload extension with a frontend file manager
 
 	:Keywords:
-		comma,separated,list,of,keywords
+		fal,filemanager,secure download,frontend filemanager
 
 	:Copyright:
 		2015
@@ -55,11 +55,6 @@ FAL Frontend File Manager
 	:glob:
 
 	Introduction/Index
-	User/Index
-	Administrator/Index
-	Configuration/Index
-	Developer/Index
-	KnownProblems/Index
-	ToDoList/Index
-	ChangeLog/Index
-	Targets
+	Installation/Index
+	FileManagerPlugin/Index
+	Misc/Index

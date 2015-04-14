@@ -1,5 +1,5 @@
-# cat=basic; type=float; label=maxFileUploadSize: The maximum file size for uploading in MB with english notation (means: VALID: 1024.5, INVALID: 1,024.5 - 1024,5 - 1.024,5 ...)
+# cat=basic; type=float; label=maxFileUploadSize: The maximum file size for uploading in MB (notation: 1024.5)
 maxFileUploadSize = 15
 
-# cat=basic; type=float; label=mxZipUploadSize: The maximum zip file size for uploading in MB with english notation (means: VALID: 1024.5, INVALID: 1,024.5 - 1024,5 - 1.024,5 ...)
+# cat=basic; type=float; label=mxZipUploadSize: The maximum zip file size for uploading in MB (notation: 1024.5)
 maxZipUploadSize = 1024
