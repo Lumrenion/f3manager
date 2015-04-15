@@ -9,13 +9,13 @@
             <f:flashMessages renderMode="div" />
         </div>
     </div>
-	<f:if condition="{folder}">
-		<f:then>
+    <f:if condition="{folder}">
+        <f:then>
             <f:render partial="FileManager/Breadcrumb" arguments="{folder:folder, parentFolders:parentFolders}" />
             <hr>
-			<sd:security.assetAccess folder="{folder}">
-				<f:render partial="FileManager/Folder" arguments="{folder:folder}" />
-			</sd:security.assetAccess>
+            <sd:security.assetAccess folder="{folder}">
+                <f:render partial="FileManager/Folder" arguments="{folder:folder}" />
+            </sd:security.assetAccess>
 
             <f3m:security.writePermission folder="{folder}">
                 <div class="modal fade" id="createFolderModal">
@@ -80,11 +80,11 @@
                 </div>
             </f3m:security.writePermission>
 
-		</f:then>
+        </f:then>
 
-		<f:else>
-			<f:translate key="noFolderSelected">No folder selected</f:translate>
-		</f:else>
-	</f:if>
+        <f:else>
+            <f:translate key="noFolderSelected">No folder selected</f:translate>
+        </f:else>
+    </f:if>
 
 </f:section>

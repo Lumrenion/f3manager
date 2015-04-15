@@ -4,7 +4,7 @@
 <div class="f3manager_folders row">
     <f:for each="{folder.subFolders}" as="subFolder">
         <sd:security.assetAccess folder="{subFolder}">
-            <f:link.action class="col-lg-2 col-md-3 col-sm-4 col-xs-12 f3manager_folder" action="openFolder" arguments="{openFolder: subFolder.identifier}">
+            <f:link.action class="col-lg-2 col-md-3 col-sm-4 col-xs-12 f3manager_folder" action="openFolder" arguments="{openFolder: subFolder.identifier}" noCacheHash="true">
                 <div class="f3manager_folder_inner_wrapper">
                     <div class="f3manager_folder_name_outer_wrapper">
                         <div class="f3manager_folder_name_inner_wrapper" aria-label="{subFolder.name}">

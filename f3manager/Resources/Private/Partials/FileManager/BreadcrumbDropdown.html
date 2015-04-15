@@ -38,7 +38,7 @@
         <f:comment>Download Folder</f:comment>
         <sd:security.assetAccess folder="{folder}">
             <li>
-                <f:link.action action="downloadFolder" arguments="{folder: crumb.identifier}">
+                <f:link.action action="downloadFolder" arguments="{folder: crumb.identifier}" noCacheHash="true">
                     <span class="glyphicon glyphicon-collapse-down"></span> <f:translate key="downloadFolderBreadcrumbButton">Download Folder</f:translate>
                 </f:link.action>
             </li>
@@ -48,7 +48,7 @@
         <f:if condition="{iteration.isFirst} == 0">
             <f3m:security.writePermission folder="{folder}">
                 <li>
-                    <f:link.action action="deleteFolder" arguments="{folder: crumb.identifier}">
+                    <f:link.action action="deleteFolder" arguments="{folder: crumb.identifier}" noCacheHash="true">
                         <span class="glyphicon glyphicon-trash"></span> <f:translate key="deleteFolderBreadcrumbButton">Delete Folder</f:translate>
                     </f:link.action>
                 </li>

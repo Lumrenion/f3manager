@@ -6,7 +6,7 @@
         <f:for each="{parentFolders}" as="crumb" iteration="iteration">
             <f:if condition="{iteration.isLast} == 0">
                 <f:then>
-                    <f:link.action class="btn btn-default" action="openFolder" arguments="{openFolder: crumb.identifier}">
+                    <f:link.action class="btn btn-default" action="openFolder" arguments="{openFolder: crumb.identifier}" noCacheHash="true">
                         <f:if condition="{crumb.name} != ''">
                             <f:then>
                                 {crumb.name}
